@@ -65,7 +65,7 @@ spec:
           system: ${{ parameters.system }}
     - id: acme:file:create
       name: Create a README file
-      action: acme:file:create
+      action: write:file
       input:
         filename: README.md
         contents: |
