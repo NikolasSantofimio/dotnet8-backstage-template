@@ -46,14 +46,6 @@ spec:
           title: Repository URL
           type: string
           description: The URL of the repository
-          ui:field: RepoUrlPicker
-          ui:options:
-            allowedOwners:
-              - 0GiS0
-              - returngis
-              - Nikolassantofimio
-            allowedHosts:
-              - github.com
   # here's the steps that are executed in series in the scaffolder backend
   # You can see all actions you have registered here: http://localhost:3000/create/actions
   steps:
