@@ -27,7 +27,7 @@ spec:
           type: string
           title: Project Name
           description: The name of the project
-          ui:autofocus: true          
+          ui:autofocus: true
           ui:field: ValidateKebabCase # Custom field extension
         description:
           title: Description
@@ -37,7 +37,7 @@ spec:
           title: Select in which group the component will be created
           type: string
           description: The group the component belongs to
-          ui:field: MyGroupsPicker          
+          ui:field: MyGroupsPicker
         system:
           title: System
           type: string
@@ -54,11 +54,12 @@ spec:
           title: Repository URL
           type: string
           description: The URL of the repository
-          ui:field: RepoUrlPicker          
-          ui:options:            
+          ui:field: RepoUrlPicker
+          ui:options:
             allowedOwners:
               - 0GiS0
               - returngis
+              - Nikolassantofimio
             allowedHosts:
               - github.com
   # here's the steps that are executed in series in the scaffolder backend
@@ -70,7 +71,7 @@ spec:
       input:
         url: ./skeleton
         copyWithoutTemplating:
-          - .github/workflows/*    
+          - .github/workflows/*
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
@@ -86,7 +87,7 @@ spec:
         contents: |
           # ${{ parameters.name }}          
           ${{ parameters.description }}
-          
+
           This is a new .NET 8 project created with 💚 using Backstage.
     - id: publish
       name: Publish
